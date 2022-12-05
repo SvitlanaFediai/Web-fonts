@@ -20,18 +20,20 @@ body {
 }
 
 .header {
-  position: relative;
+  /*position: relative;*/
   margin: 25px 0 95px;
 }
 
 .logo{
-  position: absolute;
+  margin-left: auto;
+  /*position: absolute;
   right: 120px;
-  top: -10px;
+  top: -10px;*/
 }
 
 .menu {
   display: flex;
+  align-items: center;
 }
 
 .menu__lang {
@@ -39,7 +41,7 @@ body {
   font-size: 1.375rem;
   text-transform: uppercase;
   margin-right: 50px;
-  align-self: center;
+  /*align-self: center;*/
 }
 
 .menu-list{
