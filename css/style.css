@@ -14,18 +14,38 @@ body {
   min-height: 100vh;
 }
 
+.container {
+  margin-top: 150px;
+  background-image: url(../images/bg-picture.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
+  background-position-y: 150px ;
+}
+
+.content__header,
 .content {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.content {
+  display: flex;
+}
+
 .header {
   /*position: relative;*/
-  margin: 25px 0 95px;
+  /*margin: 25px 0 95px;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
 }
 
 .logo{
   margin-left: auto;
+  font-size: 0;
   /*position: absolute;
   right: 120px;
   top: -10px;*/
@@ -34,6 +54,7 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  height: 80px;
 }
 
 .menu__lang {
@@ -62,12 +83,51 @@ body {
   padding:0 10px;
 }
 
-.chapter__title{
+.sidebar {
+  position: sticky;
+  top: 100px;
+  width: 39%;
+  margin-right: 20px;
+  height: 40vh;
+}
+
+.sidebar__item {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.sidebar__item a {
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+.text {
+  width: 59%;
+}
+
+
+.chapter {
+  margin-bottom: 70px;
+}
+
+.chapter__title {
   font-family: 'Francois One', sans-serif;
   font-size: 2.25rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.chapter .chapter__title::before {
+  content: '';
+  /*display: block;*/
+  width: 100px;
+  height: 8px;
+  background-color: var(--color-main);
+  top: -20px;
+  position: absolute;
+  /*border-bottom: 8px solid var(--color-main);*/
 }
 
 .sub-title {
@@ -98,3 +158,6 @@ body {
 .text--highlight {
   background-color: #DADADA;
 }
+
+
+

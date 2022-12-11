@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&family=Tourney:wght@600&display=swap');
+
+:root {
+  --font-main:'Roboto', sans-serif;
+  --color-main: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 22px var(--font-main);
+  color: var(--color-main);
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo{
+  margin-left: auto;
+  font-size: 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 70px;
+}
+
+.menu__lang {
+  font-family: 'Tourney', cursive;
+  font-size: 1.375rem;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+
+.menu-list{
+  display: flex;
+}
+
+.menu-list__link {
+  text-decoration: none;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.375rem;
+  color: var(--color-main);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.menu-list--after::after {
+  content: "\2215";
+  padding:0 10px;
+}
+
+.title {
+  font: 36px var(--font-main);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-left: 120px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  width: 100px;
+  height: 8px;
+  background-color: var(--color-main);
+  top: 20px;
+  left: -120px;
+  position: absolute;
+}
+
+.logo__tile {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  grid-gap: 30px;
+  border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #C9C9C9;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.icon__wrapper{
+  width: 270px;
+  height: 180px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  /*filter: invert(1);*/
+}
+
+.icon__front,
+.icon__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  padding: 35px;
+  backface-visibility: hidden;
+}
+
+.icon__wrapper:hover{
+  transform: rotateX(180deg);
+}
+
+.icon__front {
+  background-color: #E6E6E6;
+}
+
+.icon__back {
+  background-color: #1A1A1A;
+  transform: rotateX(180deg);
+}
+
+
+
